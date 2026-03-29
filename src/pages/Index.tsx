@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, delay, ease: [0.25, 0.4, 0.25, 1] },
+  transition: { duration: 0.8, delay, ease: [0.25, 0.4, 0.25, 1] as const },
 });
 
 const Index = () => {
