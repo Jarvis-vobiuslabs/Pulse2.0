@@ -95,6 +95,33 @@ const Index = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Footer */}
+      <footer className="relative z-10 border-t py-7 px-6 bg-white flex flex-col items-center gap-2.5"
+        style={{ borderColor: "rgba(0,0,0,0.07)" }}>
+        <div className="flex items-center gap-2">
+          <div className="w-[22px] h-[22px] rounded-full bg-indigo-500 flex items-center justify-center text-white text-[11px] font-bold">P</div>
+          <span className="font-['Geist',sans-serif] font-bold text-[14px] text-[#111]">Pulse</span>
+          <span className="text-[12px]" style={{ color: "rgba(0,0,0,0.2)" }}>·</span>
+          <a href="https://vobiuslabs.com" target="_blank" rel="noopener noreferrer"
+            className="font-['Geist',sans-serif] text-[12px] no-underline transition-colors"
+            style={{ color: "rgba(0,0,0,0.4)" }}>
+            A Vobius Labs Product
+          </a>
+        </div>
+        <div className="flex gap-5">
+          {[["Privacy", "/privacy"], ["Terms", "/terms"], ["Contact", "/contact"]].map(([label, href]) => (
+            <a key={label} href={href}
+              className="font-['Geist',sans-serif] text-[12px] no-underline transition-colors"
+              style={{ color: "rgba(0,0,0,0.35)" }}>
+              {label}
+            </a>
+          ))}
+        </div>
+        <p className="font-['Geist',sans-serif] text-[12px]" style={{ color: "rgba(0,0,0,0.3)" }}>
+          © 2026 Vobius Labs Inc.
+        </p>
+      </footer>
     </section>
   );
 };
